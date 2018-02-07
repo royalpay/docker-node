@@ -1,4 +1,4 @@
-# alpine node image
+# royalpay node base image
 # VERSION 8.9.4-alpine
 # Author: royalpay
 
