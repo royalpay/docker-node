@@ -1,6 +1,6 @@
 # Node base image
 # Version 8.9.4
-# Author: royalpay
+# Author: bruceli
 FROM alpine:3.6
 
 MAINTAINER royalpay bruceli@royalpay.com.au
