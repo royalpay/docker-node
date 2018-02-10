@@ -1,4 +1,4 @@
-# RoyalPay Node base image
+# Node base image
 # Version 8.9.4
 # Author: royalpay
 FROM alpine:3.6
@@ -50,7 +50,7 @@ RUN addgroup -g 1000 node \
     && rm -Rf "node-v$NODE_VERSION" \
     && rm "node-v$NODE_VERSION.tar.xz" SHASUMS256.txt.asc SHASUMS256.txt
     
-    ENV YARN_VERSION 1.3.2
+ENV YARN_VERSION 1.3.2
 
 RUN apk add --no-cache --virtual .build-deps-yarn curl gnupg tar \
   && for key in \
@@ -69,5 +69,3 @@ RUN apk add --no-cache --virtual .build-deps-yarn curl gnupg tar \
   && ln -s /opt/yarn/bin/yarn /usr/local/bin/yarnpkg \
   && rm yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz \
   && apk del .build-deps-yarn
-
-CMD [ "node" ]
